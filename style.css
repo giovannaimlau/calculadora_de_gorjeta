@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rosa-100: #f9f3fa;
+    --rosa-200: #e7c5e4;
+    --rosa-300: #bb9eb0;
+    --rosa-400: #9f7f96;
+    --rosa-500: #7d5e76;
+    --rosa-600: #78546f;
+    --rosa-700: #663d5f;
+    --rosa-800: #582650;
+    --light-rosa: #af5599;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--rosa-200);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding-block: 2.8rem;
+}
