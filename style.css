@@ -33,7 +33,9 @@ main {
     padding: 2rem;
 }
 
-.conta {
+.conta,
+.gorjeta,
+.pessoas {
     margin-bottom: 2rem;
 }
 
