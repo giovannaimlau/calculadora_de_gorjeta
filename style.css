@@ -109,6 +109,11 @@ main {
     color: var(--white);
 }
 
+.gorjeta .botao-ativo {
+    background-color: var(--light-rosa);
+    color: var(--rosa-800);
+}
+
 .gorjeta input[type="button"]:hover,
 .resultados button:hover {
     background-color: var(--rosa-hover);
