@@ -16,6 +16,8 @@
     --rosa-800: #582650;
     --light-rosa: #af5599;
     --white: #ffffff;
+    --rosa-hover: #e89fdc;
+
 }
 
 body {
@@ -75,8 +77,14 @@ main {
     color: var(--rosa-300);
 }
 
-.conta::has(input:focus) div {
+.conta:has(input:focus) div,
+.conta:has(input:hover) div,
+.pessoas:has(input:focus) div,
+.pessoas:has(input:hover) div,
+.gorjeta #outra:focus,
+.gorjeta #outra:hover {
     outline: 2px solid var(--light-rosa);
+    cursor: pointer;
 }
 
 
@@ -85,7 +93,7 @@ main {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1 rem;
+    gap: 1rem;
 }
 
 .gorjeta input {
@@ -95,9 +103,15 @@ main {
     text-align: center;
     outline: none;
     padding-block: 0.4rem;
-    border-radius: 0.315rem;
+    border-radius: 0.3125rem;
     background-color: var(--rosa-800);
     color: var(--white);
+}
+
+.gorjeta input[type="button"]:hover {
+    background-color: var(--rosa-hover);
+    cursor: pointer;
+
 }
 
 .gorjeta #outra {
@@ -161,6 +175,12 @@ main {
     padding-block: 0.5rem;
 }
 
+.conta input::-webkit-inner-spin-button,
+.pessoas input::-webkit-inner-spin-button,
+.gorjeta #outra::-webkit-inner-spin-button {
+    display: none;
+}
+
 @media(min-width: 920px) {
     body {
         display: flex;
@@ -181,11 +201,6 @@ main {
 
     main section {
         width: 100px;
-    }
-
-    .conta input::-webkit-inner-spin-button,
-    .pessoas input::-webkit-inner-spin-button {
-        display: none;
     }
 
     .gorjeta div {
